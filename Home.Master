@@ -1,0 +1,64 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Home.master.cs" Inherits="WebSurvey.Home" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Web Survey</title>
+    <link rel="stylesheet" type="text/css" href="Css/TrangChu.css">
+    <link rel="stylesheet" type="text/css" href="Css/TaoKhaoSat.css">
+    <link rel="stylesheet" type="text/css" href="Css/LamKhaoSat.css">
+    <link rel="stylesheet" type="text/css" href="Css/DangNhap.css">
+    <script type ="text/javascript" src="Js/TaoKhaoSat.js"></script>
+</head>
+<body>
+    <header class="col-1">
+        <div id="logo">
+            <a href="TrangChu.aspx"><img src="Img/logo1.png" alt ="Logo" height= "auto" width ="70%"></a>
+        </div>
+        <nav class ="menu">
+            <a href ="KhaoSatCuaToi.aspx">Khảo sát của tôi</a>
+            <a href ="TaoKhaoSat.aspx">Tạo khảo sát</a>
+            <a href ="LamKhaoSat.aspx">Làm khảo sát</a>
+            <%
+            if ((int)Session["user"] == 0)
+            {
+                %>
+                    <a href="DangNhap.aspx">Đăng nhập</a>
+            <%
+            }
+            else
+            {
+                %>
+                    <a href="DangXuat.aspx">Thoát</a>
+            <% } %>
+        </nav>
+
+                
+    </header>
+     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+     </asp:ContentPlaceHolder>
+    <footer class="col-4">
+        <%--<figure>
+            <a href="#"><img src="Img/logo.png" alt="logo" height="70%" ></a>
+        </figure>--%>
+            <img src="Img/logo1.png" alt ="Logo" height= "auto" width ="10%">
+            <div>
+                <div class ="chu">
+                    <p>
+                    <b>HỢP TÁC NỘI DUNG</b><br/>
+                    Email: info@surveyy.vn<br/>
+                    Phone: 0906 214 025
+                    </p>
+                </div>
+                <div class ="chu">
+                    <p>
+                    <b>LIÊN HỆ QUẢNG CÁO</b><br/>
+                    Email: marketing@surveyy.vn<br/>
+                    Bản quyền thuộc về surveyy
+                    </p>   
+                </div>
+            </div>
+    </footer>
+</body>
+</html>

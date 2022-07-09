@@ -1,0 +1,127 @@
+﻿* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: white;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    background-color: #2062ec;
+    width: 100%;
+    height: auto;
+}
+
+/*#logo {
+    display: block;
+    overflow: hidden;
+    padding: 0px;
+}*/
+
+
+
+.menu {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+nav.menu > a {
+    padding: 20% 10px 10px 10px;
+    color: gainsboro;
+    text-align: center;
+    font-size: 30px;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+nav > a:hover {
+    color: white;
+    font-size: 35px;
+}
+
+
+
+footer {
+    background-color: #2062ec;
+    color: white;
+    margin-top: 200px;
+}
+.chu{
+    padding: 20px 10px 10px 10px;
+ 
+}
+#noidung{
+    margin-top: 250px;
+    justify-content:center;
+}
+#anhbia {
+    float:left;
+    padding-top: 10px;
+    padding-left: 200px;
+    padding-bottom:90px;
+    
+}
+#chuanhbia {
+    padding-top: 10px;
+    font-family: sans-serif;
+    font-size: 25px;
+    padding-right:30px;
+}
+
+@media screen and (max-width:768px) {
+    [class*="col-"] {
+        width: 100%;
+    }
+
+    nav.menu > a {
+        padding: 10px;
+        font-size: 15px;
+    }
+    nav.menu > a:hover {
+        font-size: 20px;
+    }
+    #noidung{
+        margin-top:50px;
+    }
+    #anhbia {
+        width: 50%;
+        padding-left: 100px;
+        padding-top:50px;
+        padding-bottom:50px;
+        float:none;
+    }
+    #chuanhbia{
+        font-size:15px;
+        padding-left:20px;
+    }
+    footer > img{
+        width:20%;
+    }
+    footer {
+        font-size:12px;
+        padding-bottom: 0px;
+    }
+}
+
+footer {
+    clear: both;
+    position: relative;
+    background-color: #2062ec;
+    color: white;
+    font-family: sans-serif;
+    height:120px;
+}
+
+footer img{
+    float: left;
+
+}
+.chu {
+    display: inline-block;
+    padding: 20px 10px 10px 10px;
+}

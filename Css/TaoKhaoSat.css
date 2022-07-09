@@ -1,0 +1,24 @@
+﻿#noidungchude {
+    padding: 10px 0px 0px 10px;
+}
+
+#noidungkhaosat{
+    padding: 10px 0px 0px 10px;
+}
+
+#noidungkhaosat div{
+    padding-top: 10px;
+}
+
+#nut {
+    padding: 10px 0px 0px 10px;
+}
+
+#noidungtrang{
+    padding-bottom: 200px;
+}
+@media screen and (max-width:768px) {
+    #noidungtrang {
+        padding-bottom: 250px;
+    }
+}

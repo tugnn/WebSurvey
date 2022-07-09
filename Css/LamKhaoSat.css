@@ -1,0 +1,12 @@
+﻿#noidunglam{
+    padding-bottom: 150px;
+}
+#noidunglam div{
+    padding-top: 10px;
+    margin-left: 10px;
+}
+@media screen and (max-width:768px) {
+    #noidunglam {
+        padding-bottom: 250px;
+    }
+}

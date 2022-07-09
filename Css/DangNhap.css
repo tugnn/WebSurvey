@@ -1,0 +1,9 @@
+﻿#noidungdangnhap{
+    margin-left: 10px;
+    padding-bottom: 70px;
+}
+@media screen and (max-width:768px) {
+  #noidungdangnhap{
+      padding-bottom: 150px;
+  }
+}
