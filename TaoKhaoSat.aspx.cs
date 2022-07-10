@@ -27,7 +27,7 @@ namespace WebSurvey
             //insert topic
             using (SqlConnection cnn = new SqlConnection(constr))
             {
-                string sqlInsertTopic = "Insert into tblTopic (topicName, createUserId) values ('" + topicName + "', " + createUserId + ")";
+                string sqlInsertTopic = "Insert into tblTopic (topicName, createUserId) values (N'" + topicName + "', " + createUserId + ")";
                 string sqlSelectTopic = "Select * from tblTopic";
                 SqlDataAdapter adapter = new SqlDataAdapter(sqlSelectTopic, cnn);
                 DataTable dtTopic = new DataTable();
@@ -53,7 +53,7 @@ namespace WebSurvey
             int topicId = 0;
             using (SqlConnection cnn = new SqlConnection(constr))
             {
-                string sqlSelectTopicId = "Select * from tblTopic where topicName ='" + topicName + "'";
+                string sqlSelectTopicId = "Select * from tblTopic where topicName =N'" + topicName + "'";
                 using (SqlCommand cmd = new SqlCommand(sqlSelectTopicId, cnn))
                 {
                     cnn.Open();
@@ -76,7 +76,7 @@ namespace WebSurvey
                 {
                     var noidung = Request.Form["txtcauhoi" + i];
                     var dangcautraloi = Request.Form["dangcautraloi" + i];
-                    string sqlInsertQuestion = "Insert into tblQuestion (topicId, questionName, typeAnswer) values (" + topicId + ", '" + noidung + "', " + dangcautraloi + ")";
+                    string sqlInsertQuestion = "Insert into tblQuestion (topicId, questionName, typeAnswer) values (" + topicId + ", N'" + noidung + "', " + dangcautraloi + ")";
                     string sqlSelectQuestion = "Select * from tblQuestion";
                     SqlDataAdapter adapter = new SqlDataAdapter(sqlSelectQuestion, cnn);
                     DataTable dtTopic = new DataTable();
